@@ -1,0 +1,320 @@
+body
+{
+	background-color: #1e1e1e;
+}
+
+#container
+{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #1e1e1e;
+	border: 7px solid blue;
+	height: 810px;
+}
+
+#header
+{
+	text-align: center;
+	font-family: Helvetica, sans-serif;
+	color: white;
+	background-color: #1e1e1e;
+	padding: 15px;
+	border: 7px solid lightblue;
+}
+
+#leftchest
+{
+	width: 300px;
+	float: left;
+
+}
+
+#midchest
+{
+	width: 400px;
+	float: left;
+	font-size: 20px;
+	background-color: #4e4f52;
+}
+
+	#graj
+	{
+		text-align: center;
+		color: white;
+		padding: 15px;
+		border: 7px solid blue;
+	}
+	
+	#graj:hover
+	{
+		color: #778191;
+		border: 7px solid #4869a1;
+		background-color: #555659;
+		cursor: pointer;
+	}
+
+	#tabela
+	{
+		text-align: center;
+		color: white;
+		padding: 15px;
+		border: 7px solid blue;
+	}
+	
+	#tabela:hover
+	{
+		color: #778191;
+		border: 7px solid #4869a1;
+		background-color: #555659;
+		cursor: pointer;	
+	}
+
+	#ustawienia
+	{
+		text-align: center;
+		color: white;
+		padding: 15px;
+		border: 7px solid blue;
+	}
+	
+	#ustawienia:hover
+	{
+		color: #778191;
+		border: 7px solid #4869a1;
+		background-color: #555659;
+		cursor: pointer;
+	}	
+	
+	
+	#trybImprezowy
+	{
+		text-align: center;
+		color: white;
+		padding: 15px;
+		border: 7px solid blue;
+	}
+	
+	#trybImprezowy:hover
+	{
+		color: #778191;
+		border: 7px solid #4869a1;
+		background-color: #555659;
+		cursor: pointer;
+	}
+	
+	
+	#trybPojedynczy
+	{
+		text-align: center;
+		color: white;
+		padding: 15px;
+		border: 7px solid blue;
+	}
+	
+	#trybPojedynczy:hover
+	{
+		color: #778191;
+		border: 7px solid #4869a1;
+		background-color: #555659;
+		cursor: pointer;
+	}
+	
+	
+	#powrot
+	{
+		text-align: center;
+		color: white;
+		padding: 15px;
+		border: 7px solid blue;
+	}
+	
+	#powrot:hover
+	{
+		color: #778191;
+		border: 7px solid #4869a1;
+		background-color: #555659;
+		cursor: pointer;
+	}
+
+#rightchest
+{
+	width: 300px;
+	float: left;
+
+}
+
+#rafal
+{
+	clear: both;
+	min-height: 426px;
+	border-top: 7px solid blue;
+	border-bottom: 7px solid blue;
+}
+
+
+
+#footer
+{
+	text-align: center;
+	color: white;
+}
+
+#gracz1,#gracz2,#gracz3,#gracz4
+{
+	float:left;
+	position: relative;
+}
+
+
+#gracze
+{
+	border-top: 7px solid blue;
+	border-bottom: 7px solid blue;
+	height:270px;
+	
+}
+
+#zatwierdzanie
+{
+	clear: both;
+	height: 152px;
+}
+
+#money1, #money2, #money3, #money4
+{
+	position: absolute;
+	color:white;
+	font-size: 22px;
+	width:250px;
+	text-align: center;
+	margin-top: 139px
+}
+
+
+#napisy
+{
+	position:absolute;
+	color: lightblue;
+	font-size:30px;
+	width:1000px;
+	text-align:center;
+	margin-top:100px;
+}
+
+
+#napisy2
+{
+	position:absolute;
+	color: lightblue;
+	font-size:40px;
+	width:1000px;
+	text-align:center;
+	margin-top:278px;
+}
+
+#napisy3
+{
+	position:absolute;
+	color: blue;
+	font-size:26px;
+	width:1000px;
+	text-align:center;
+	margin-top:193px;
+}
+
+#zatwierdzanie
+{
+	width: 1000px;
+	height: 152px;
+}
+
+
+#zatwierdzaniePytanie
+{
+	position:relative;
+	width:330px;
+	padding: 8px;
+	text-align:center;
+	color: white;
+	border: 7px solid grey;
+	margin-left: auto;
+	margin-right: auto;
+	top: 17px;
+	font-size:20px;
+}
+
+#zatwierdzanieTak
+{
+	float:left;
+	position:relative;
+	width:80px;
+	padding: 8px;
+	text-align:center;
+	color: white;
+	border: 7px solid green;
+	margin-left: 350px;
+	top:30px;
+	font-size:20px;
+	cursor:pointer;
+
+}
+
+#zatwierdzanieNie
+{
+	float:right;
+	position:relative;
+	width:80px;
+	padding: 8px;
+	text-align:center;
+	color: white;
+	border: 7px solid darkred;
+	margin-right: 350px;
+	top:30px;
+	font-size:20px;
+	cursor:pointer;
+}
+
+#zatwierdzanieTak:hover
+{
+	filter:brightness(200%);
+}
+
+#zatwierdzanieNie:hover
+{
+	filter:brightness(200%);
+}
+
+#zatwierdzanieOdpowiedz
+{
+	clear:both;
+	float:top;
+	position:relative;
+	width:330px;
+	padding: 8px;
+	text-align:center;
+	color: white;
+	border: 7px solid grey;
+	margin-left: auto;
+	margin-right: auto;
+	top: -60px;
+	font-size:20px;
+	white-space:nowrap;
+	cursor:pointer;
+}
+
+#zatwierdzanieOdpowiedz:hover
+{
+	filter:brightness(200%);
+}
+
+
+
+
+#tablica
+{
+	cursor:pointer;
+}
+
+
+

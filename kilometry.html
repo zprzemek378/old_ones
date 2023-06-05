@@ -1,0 +1,908 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+
+	<head>
+		<meta charset="utf-8"/>
+		<script type="text/javascript">
+			
+			var kilometry = new Array(0,0,0,0,0,0,0,0,0);
+			var wybraneA = new Array(0,0,0,0,0,0,0,0,0);
+			var wybraneB = new Array(0,0,0,0,0,0,0,0,0);
+			
+			function policzWszystko()
+			{
+			
+				for(j=1;j<=9;j++)
+				{
+					for(i=1;i<=8;i++)
+					{
+						wybraneA[j-1] = document.getElementById("wybor"+j+i).value;
+						wybraneB[j-1] = document.getElementById("wybor"+j+(i+1)).value;
+						
+						if((wybraneA[j-1]=="tl")&&(wybraneB[j-1]=="h")) kilometry[j-1] = kilometry[j-1] + 21.7;
+						if((wybraneA[j-1]=="tl")&&(wybraneB[j-1]=="g")) kilometry[j-1] = kilometry[j-1] + 19.3;
+						if((wybraneA[j-1]=="tl")&&(wybraneB[j-1]=="l")) kilometry[j-1] = kilometry[j-1] + 27.7;
+						if((wybraneA[j-1]=="tl")&&(wybraneB[j-1]=="t")) kilometry[j-1] = kilometry[j-1] + 36.4;
+						if((wybraneA[j-1]=="tl")&&(wybraneB[j-1]=="j")) kilometry[j-1] = kilometry[j-1] + 19.4;
+						if((wybraneA[j-1]=="tl")&&(wybraneB[j-1]=="m")) kilometry[j-1] = kilometry[j-1] + 29.6;
+	
+						if((wybraneA[j-1]=="h")&&(wybraneB[j-1]=="tl")) kilometry[j-1] = kilometry[j-1] + 21.8;
+						if((wybraneA[j-1]=="h")&&(wybraneB[j-1]=="g")) kilometry[j-1] = kilometry[j-1] + 11.9;
+						if((wybraneA[j-1]=="h")&&(wybraneB[j-1]=="l")) kilometry[j-1] = kilometry[j-1] + 13.6;
+						if((wybraneA[j-1]=="h")&&(wybraneB[j-1]=="t")) kilometry[j-1] = kilometry[j-1] + 15.4;
+						if((wybraneA[j-1]=="h")&&(wybraneB[j-1]=="j")) kilometry[j-1] = kilometry[j-1] + 12.6;
+						if((wybraneA[j-1]=="h")&&(wybraneB[j-1]=="m")) kilometry[j-1] = kilometry[j-1] + 17.2;
+						
+						if((wybraneA[j-1]=="g")&&(wybraneB[j-1]=="tl")) kilometry[j-1] = kilometry[j-1] + 19.4;
+						if((wybraneA[j-1]=="g")&&(wybraneB[j-1]=="h")) kilometry[j-1] = kilometry[j-1] + 11.9;
+						if((wybraneA[j-1]=="g")&&(wybraneB[j-1]=="l")) kilometry[j-1] = kilometry[j-1] + 13.8;
+						if((wybraneA[j-1]=="g")&&(wybraneB[j-1]=="t")) kilometry[j-1] = kilometry[j-1] + 21.6;
+						if((wybraneA[j-1]=="g")&&(wybraneB[j-1]=="j")) kilometry[j-1] = kilometry[j-1] + 10.3;
+						if((wybraneA[j-1]=="g")&&(wybraneB[j-1]=="m")) kilometry[j-1] = kilometry[j-1] + 17.4;
+						
+						if((wybraneA[j-1]=="l")&&(wybraneB[j-1]=="tl")) kilometry[j-1] = kilometry[j-1] + 27.7;
+						if((wybraneA[j-1]=="l")&&(wybraneB[j-1]=="h")) kilometry[j-1] = kilometry[j-1] + 16.9;
+						if((wybraneA[j-1]=="l")&&(wybraneB[j-1]=="g")) kilometry[j-1] = kilometry[j-1] + 13.8;
+						if((wybraneA[j-1]=="l")&&(wybraneB[j-1]=="t")) kilometry[j-1] = kilometry[j-1] + 8.6;
+						if((wybraneA[j-1]=="l")&&(wybraneB[j-1]=="j")) kilometry[j-1] = kilometry[j-1] + 22.2;
+						if((wybraneA[j-1]=="l")&&(wybraneB[j-1]=="m")) kilometry[j-1] = kilometry[j-1] + 5.3;
+						
+						if((wybraneA[j-1]=="t")&&(wybraneB[j-1]=="tl")) kilometry[j-1] = kilometry[j-1] + 36.5;
+						if((wybraneA[j-1]=="t")&&(wybraneB[j-1]=="h")) kilometry[j-1] = kilometry[j-1] + 15.4;
+						if((wybraneA[j-1]=="t")&&(wybraneB[j-1]=="g")) kilometry[j-1] = kilometry[j-1] + 21.6;
+						if((wybraneA[j-1]=="t")&&(wybraneB[j-1]=="l")) kilometry[j-1] = kilometry[j-1] + 8.6;
+						if((wybraneA[j-1]=="t")&&(wybraneB[j-1]=="j")) kilometry[j-1] = kilometry[j-1] + 27.3;
+						if((wybraneA[j-1]=="t")&&(wybraneB[j-1]=="m")) kilometry[j-1] = kilometry[j-1] + 13.9;
+						
+						if((wybraneA[j-1]=="j")&&(wybraneB[j-1]=="tl")) kilometry[j-1] = kilometry[j-1] + 19.5;
+						if((wybraneA[j-1]=="j")&&(wybraneB[j-1]=="h")) kilometry[j-1] = kilometry[j-1] + 12.6;
+						if((wybraneA[j-1]=="j")&&(wybraneB[j-1]=="g")) kilometry[j-1] = kilometry[j-1] + 10.3;
+						if((wybraneA[j-1]=="j")&&(wybraneB[j-1]=="l")) kilometry[j-1] = kilometry[j-1] + 25.6;
+						if((wybraneA[j-1]=="j")&&(wybraneB[j-1]=="t")) kilometry[j-1] = kilometry[j-1] + 27.3;
+						if((wybraneA[j-1]=="j")&&(wybraneB[j-1]=="m")) kilometry[j-1] = kilometry[j-1] + 25.7;
+						
+						if((wybraneA[j-1]=="m")&&(wybraneB[j-1]=="tl")) kilometry[j-1] = kilometry[j-1] + 29.7;
+						if((wybraneA[j-1]=="m")&&(wybraneB[j-1]=="h")) kilometry[j-1] = kilometry[j-1] + 20.5;
+						if((wybraneA[j-1]=="m")&&(wybraneB[j-1]=="g")) kilometry[j-1] = kilometry[j-1] + 17.4;
+						if((wybraneA[j-1]=="m")&&(wybraneB[j-1]=="l")) kilometry[j-1] = kilometry[j-1] + 5.3;
+						if((wybraneA[j-1]=="m")&&(wybraneB[j-1]=="t")) kilometry[j-1] = kilometry[j-1] + 13.9;
+						if((wybraneA[j-1]=="m")&&(wybraneB[j-1]=="j")) kilometry[j-1] = kilometry[j-1] + 25.8;
+						
+						
+					}
+				}
+				
+				var dodatkoweKilometry = document.getElementById("wyborDodatkowychKilometrow").value;
+				var cena = document.getElementById("wyborCeny").value;
+				var spalanie = document.getElementById("wyborSpalania").value;
+				
+				var dystansWszystkich = 0;
+				for(i=1;i<=8;i++) dystansWszystkich = dystansWszystkich+kilometry[i];
+				var osoby = new Array();
+				
+				
+				for (i=1;i<=8;i++)
+				{j
+					osoby[i-1] = document.getElementById("wyborOsoby"+(i+1)).value;
+					if(osoby[i-1]!=0)
+					{
+						document.getElementById("kosztOsoba"+i).innerHTML = "Koszt " + osoby[i-1] + " wynosi " + (kilometry[i]/dystansWszystkich)*(((kilometry[0]/1 + dodatkoweKilometry/1)*spalanie*cena)/100);
+					}
+					
+				}
+				document.getElementById("przycisk").style.display = "none";
+
+			}
+		
+		
+		</script>
+		
+	</head>
+
+
+
+
+	<body>
+		
+		<div>Trasa całkowita: </div>
+		
+		<select id="wybor11">
+			<option value="nothing">-</option>
+			<option value="tl">TL</option>
+			<option value="h">Hubinek</option>
+			<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+		</select>
+		
+		<span> ---> </span>
+		
+		<select id="wybor12">
+			<option value="nothing">-</option>
+			<option value="tl">TL</option>
+			<option value="h">Hubinek</option>
+			<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+		</select>
+				
+		<span> ---> </span>
+		
+		<select id="wybor13">
+			<option value="nothing">-</option>
+			<option value="tl">TL</option>
+			<option value="h">Hubinek</option>
+			<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+		</select>
+				
+		<span> ---> </span>
+		
+		<select id="wybor14">
+			<option value="nothing">-</option>
+			<option value="tl">TL</option>
+			<option value="h">Hubinek</option>
+			<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+		</select>
+		
+		<span> ---> </span>
+		
+		<select id="wybor15">
+			<option value="nothing">-</option>
+			<option value="tl">TL</option>
+			<option value="h">Hubinek</option>
+			<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+		</select>
+		
+		<span> ---> </span>
+		
+		<select id="wybor16">
+			<option value="nothing">-</option>
+			<option value="tl">TL</option>
+			<option value="h">Hubinek</option>
+			<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+		</select>
+		
+		<span> ---> </span>
+		
+		<select id="wybor17">
+			<option value="nothing">-</option>
+			<option value="tl">TL</option>
+			<option value="h">Hubinek</option>
+			<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+		</select>
+		
+		
+		<span> ---> </span>
+		
+		<select id="wybor18">
+			<option value="nothing">-</option>
+			<option value="tl">TL</option>
+			<option value="h">Hubinek</option>
+			<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+		</select>	
+
+
+		<span> ---> </span>
+		
+		<select id="wybor19">
+			<option value="nothing">-</option>
+			<option value="tl">TL</option>
+			<option value="h">Hubinek</option>
+			<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+		</select>		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div>Dodatkowe kilometry:</div>
+		<input type="number" id="wyborDodatkowychKilometrow" value="0"/>
+
+		
+		<div>Cena paliwa za 1 litr:</div>
+		<input type="number" id="wyborCeny"/>
+		
+		<div>Spalanie samochodu na 100km:</div>
+		<input type="number" id="wyborSpalania"/>
+		
+		
+		
+			<div>Osoba 1:</div>
+					<input type="text" id="wyborOsoby2"/>
+					
+					<span>Trasa: </span>
+					
+					<select id="wybor21">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+					
+					<span> ---> </span>
+					
+					<select id="wybor22">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor23">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor24">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor25">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor26">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor27">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor28">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor29">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+				
+			<div>Osoba 2:</div>
+					<input type="text" id="wyborOsoby3"/>
+					
+					<span>Trasa: </span>
+					
+					<select id="wybor31">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+					
+					<span> ---> </span>
+					
+					<select id="wybor32">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor33">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor34">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor35">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor36">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor37">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor38">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor39">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+
+
+			<div>Osoba 3:</div>
+					<input type="text" id="wyborOsoby4"/>
+					
+					<span>Trasa: </span>
+					
+					<select id="wybor41">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+					
+					<span> ---> </span>
+					
+					<select id="wybor42">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor43">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor44">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor45">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor46">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor47">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor48">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor49">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+
+			<div>Osoba 4:</div>
+					<input type="text" id="wyborOsoby5"/>
+					
+					<span>Trasa: </span>
+					
+					<select id="wybor51">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+					
+					<span> ---> </span>
+					
+					<select id="wybor52">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor53">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor54">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor55">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor56">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor57">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor58">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor59">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+					
+					
+			<div>Osoba 5:</div>
+					<input type="text" id="wyborOsoby6"/>
+					
+					<span>Trasa: </span>
+					
+					<select id="wybor61">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+					
+					<span> ---> </span>
+					
+					<select id="wybor62">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor63">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor64">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor65">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor66">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor67">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor68">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor69">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+					
+					
+					
+			<div>Osoba 6:</div>
+					<input type="text" id="wyborOsoby7"/>
+					
+					<span>Trasa: </span>
+					
+					<select id="wybor71">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+					
+					<span> ---> </span>
+					
+					<select id="wybor72">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor73">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor74">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor75">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor76">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor77">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor78">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor79">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+
+
+			<div>Osoba 7:</div>
+					<input type="text" id="wyborOsoby8"/>
+					
+					<span>Trasa: </span>
+					
+					<select id="wybor81">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+					
+					<span> ---> </span>
+					
+					<select id="wybor82">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor83">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor84">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor85">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor86">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor87">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor88">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor89">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+					
+					
+			<div>Osoba 8:</div>
+					<input type="text" id="wyborOsoby9"/>
+					
+					<span>Trasa: </span>
+					
+					<select id="wybor91">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+					
+					<span> ---> </span>
+					
+					<select id="wybor92">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor93">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor94">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor95">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor96">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor97">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor98">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+							
+					<span> ---> </span>
+					
+					<select id="wybor99">
+						<option value="nothing">-</option>
+						<option value="tl">TL</option>
+						<option value="h">Hubinek</option>
+						<option value="g">Gródek</option> <option value="l">Łaszczów</option> <option value="t">Telatyn</option> <option value="j">Jurów</option> <option value="m">Muratyn</option>
+					</select>
+
+
+
+
+		<input type="submit" id="przycisk" value="Policz" onclick="policzWszystko()"/>
+		
+		
+		<div id="kosztOsoba1"> </div>
+		<div id="kosztOsoba2"> </div>
+		<div id="kosztOsoba3"> </div>
+		<div id="kosztOsoba4"> </div>
+		<div id="kosztOsoba5"> </div>
+		<div id="kosztOsoba6"> </div>
+		<div id="kosztOsoba7"> </div>
+		<div id="kosztOsoba8"> </div>
+
+	</body>
+
+
+</html>
