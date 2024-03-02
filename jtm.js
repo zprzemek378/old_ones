@@ -12,6 +12,7 @@ var numerPiosenki;
 var czyMoznaZgadywac = 0;
 var ktoKliknal = 0;
 var numerRundy = 1;
+var zbanowanyGracz = null;
 
 var gotowka = new Array(0,0,0,0);
 
