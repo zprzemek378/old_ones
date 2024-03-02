@@ -215,6 +215,9 @@ function ktosKliknal(ktoKliknalLokalne)
 		document.getElementById("napisy3").innerHTML = "ODPOWIADA GRACZ " + ktoKliknal;
 		
 		document.getElementById("zatwierdzanieOdpowiedz").style.visibility="visible";
+
+		console.log("ktoś kliknął! gracz ", ktoKliknal);
+		sek10();
 	}
 	
 }
