@@ -24,10 +24,10 @@ function sprawdzanieKlawisza(przycisk)
 	{
 		var wcisnietyKlawisz = przycisk.key;
 		
-		if(wcisnietyKlawisz == "q" || wcisnietyKlawisz == "Q")	ktosKliknal("1");
-		if(wcisnietyKlawisz == "c" || wcisnietyKlawisz == "C")	ktosKliknal("2");
-		if(wcisnietyKlawisz == "m" || wcisnietyKlawisz == "M")	ktosKliknal("3");
-		if(wcisnietyKlawisz == "p" || wcisnietyKlawisz == "P")	ktosKliknal("4");
+		if((wcisnietyKlawisz == "q" || wcisnietyKlawisz == "Q") && zbanowanyGracz != 1)	ktosKliknal("1");
+		if((wcisnietyKlawisz == "c" || wcisnietyKlawisz == "C") && zbanowanyGracz != 2)	ktosKliknal("2");
+		if((wcisnietyKlawisz == "m" || wcisnietyKlawisz == "M") && zbanowanyGracz != 3)	ktosKliknal("3");
+		if((wcisnietyKlawisz == "p" || wcisnietyKlawisz == "P") && zbanowanyGracz != 4)	ktosKliknal("4");
 	}	
 }
 
@@ -49,6 +49,10 @@ function odliczanie()
 	document.getElementById("gracz2").style.filter= "brightness(100%)";
 	document.getElementById("gracz3").style.filter= "brightness(100%)";
 	document.getElementById("gracz4").style.filter= "brightness(100%)";
+
+	if(zbanowanyGracz != null) {
+			document.getElementById(`gracz${zbanowanyGracz}`).style.filter= "brightness(50%)";
+	}
 	
 	
 	
@@ -152,7 +156,7 @@ function niktNieKliknal()
 	document.getElementById("gracz3").style.filter= "brightness(40%)";
 	document.getElementById("gracz4").style.filter= "brightness(40%)";
 		
-	
+	zbanowanyGracz = null;
 	
 	pozostalyCzas=5
 	
@@ -178,6 +182,7 @@ function ktosKliknal(ktoKliknalLokalne)
 	if(czyMoznaZgadywac==1)
 	{
 		ktoKliknal = ktoKliknalLokalne;
+		zbanowanyGracz = null;
 		piosenka.pause();
 		czyPrzerwac = 1;
 		czyMoznaZgadywac = 0;
@@ -233,7 +238,8 @@ function odpowiedzialZle()
 {
 	pozostalyCzas=5
 	odliczanie()
-	
+
+	zbanowanyGracz = ktoKliknal;
 	
 	document.getElementById("zatwierdzaniePytanie").style.top="50px";	
 	document.getElementById("zatwierdzaniePytanie").style.width="600px";
