@@ -179,7 +179,12 @@ function niktNieKliknal()
 let timer;
 
 function sek10(czyZatrzymac) {
-	
+
+	if(czyZatrzymac) {
+		console.log("zatrzymaj timer teraz");
+	      clearInterval(timer);
+		return;
+	}
 
 	
 	document.getElementById("napisy").innerHTML = "$" + pieniadze;
@@ -197,10 +202,7 @@ function sek10(czyZatrzymac) {
 	    }
 	  }, 1000);
 	
-	if(czyZatrzymac) {
-		console.log("zatrzymaj timer pies");
-	      clearInterval(timer);
-	}
+
 	
 }
 
