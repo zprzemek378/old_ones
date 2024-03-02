@@ -176,6 +176,8 @@ function niktNieKliknal()
 
 }
 
+let timer;
+
 function sek10(czyZatrzymac) {
 	
 
@@ -185,7 +187,7 @@ function sek10(czyZatrzymac) {
 
 	  let czas = 10;
 
-	  const timer = setInterval(() => {
+	  timer = setInterval(() => {
 	    if (czas === 0) {
 	      clearInterval(timer);
 		document.getElementById("napisy").innerHTML = "$" + pieniadze + " Koniec czasu!";
@@ -196,7 +198,7 @@ function sek10(czyZatrzymac) {
 	  }, 1000);
 	
 	if(czyZatrzymac) {
-		console.log("zatrzymaj timer");
+		console.log("zatrzymaj timer pies");
 	      clearInterval(timer);
 	}
 	
