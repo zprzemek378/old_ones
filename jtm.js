@@ -176,6 +176,25 @@ function niktNieKliknal()
 
 }
 
+function sek10() {
+	document.getElementById("napisy").innerHTML = "$" + pieniadze;
+
+
+	  let czas = 10;
+
+	  const timer = setInterval(() => {
+	    if (czas === 0) {
+	      clearInterval(timer);
+		document.getElementById("napisy").innerHTML = "$" + pieniadze + " Koniec czasu!";
+	    } else {
+		document.getElementById("napisy").innerHTML = "$" + pieniadze + " " + czas;
+	      czas--;
+	    }
+	  }, 1000);
+	}
+
+}
+
 
 function ktosKliknal(ktoKliknalLokalne)
 {
