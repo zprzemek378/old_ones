@@ -176,7 +176,10 @@ function niktNieKliknal()
 
 }
 
-function sek10() {
+function sek10(czyZatrzymac) {
+	
+
+	
 	document.getElementById("napisy").innerHTML = "$" + pieniadze;
 
 
@@ -192,6 +195,10 @@ function sek10() {
 	    }
 	  }, 1000);
 	
+	if(czyZatrzymac) {
+		console.log("zatrzymaj timer");
+	      clearInterval(timer);
+	}
 	
 }
 
@@ -217,7 +224,7 @@ function ktosKliknal(ktoKliknalLokalne)
 		document.getElementById("zatwierdzanieOdpowiedz").style.visibility="visible";
 
 		console.log("ktoś kliknął! gracz ", ktoKliknal);
-		sek10();
+		sek10(false);
 	}
 	
 }
@@ -236,6 +243,7 @@ function ktosKliknal2()
 
 function odpowiedzialDobrze()
 {
+	sek10(true);
 	gotowka[ktoKliknal-1] = gotowka[ktoKliknal-1] + pieniadze;
 	pozostalyCzas = 5;
 
@@ -258,6 +266,7 @@ function odpowiedzialDobrze()
 
 function odpowiedzialZle()
 {
+	sek10(true);
 	pozostalyCzas=5
 	odliczanie()
 
